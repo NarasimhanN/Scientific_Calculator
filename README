@@ -1,0 +1,19 @@
+Problem Statement
+Creating a scientific calculator program with user menu driven operations
+● Square root function - √x
+● Factorial function - x!
+● Natural logarithm (base е) - ln(x)
+● Power function - xb
+
+
+DevOps tool chain:
+
+
+1. Using a source control management tool - like GitHub
+2. Testing - test your code using either JUnite
+3. Build - build code using  Maven
+4. Continuous Integration - Continuous integrating code using Jenkins
+5. Containerize - Containerize code using Docker.
+6. Pushing created Docker image to Docker hub .
+7. Deployment - Do configuration management and deployment using  Ansible. Using these do configuration management and pull your docker image and run it on the managed hosts.
+8. Monitoring - for monitoring using the ELK stack. Using a log file to do the monitoring.
