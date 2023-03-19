@@ -1,0 +1,58 @@
+pipeline {
+    environment {
+    registry = "narasimhannandagudi/scientific_calculator"
+    registryCredential = 'dockerhub_id'
+    dockerImage = ''
+    }
+    agent any
+
+    stages {
+        stage('Git access') {
+            steps {
+               git branch: 'main', url: 'https://github.com/NarasimhanN/Scientific_Calculator.git'
+            }
+        }
+        stage('Maven Build'){
+            steps{
+                sh "mvn clean install"
+                // sh "java -jar ./target/Calculator_MiniProject-1.0-SNAPSHOT-jar-with-dependencies.jar"
+            }
+        }
+        stage('Build Docker Image'){
+            steps{
+                //sh "docker build -t Calculator ."
+                   //  dockerImage = docker.build registry + ":latest"
+                   script{
+                //   dockerImage = docker.build("narasimhannandagudi/scientific_calculator:"+"$BUILD_NUMBER")
+                    dockerImage = docker.build("narasimhannandagudi/scientific_calculator:"+"latest")
+
+                   }
+                  //  sh "echo $BUILD_NUMBER"
+
+            }
+        }
+        stage("Upload Image to DockerHub"){
+            steps{
+                script{
+                    docker.withRegistry('',registryCredential){
+                        dockerImage.push()
+                    }
+                }
+            }
+        }
+        stage("Cleanup"){
+            steps{
+                // sh "docker rmi $registry:$BUILD_NUMBER"
+                    sh "docker rmi $registry:latest"
+
+            }
+        }
+        stage("Ansible Pull image"){
+            steps{
+                ansiblePlaybook colorized: true, disableHostKeyChecking: true, inventory: 'deploy_docker/inventory', playbook: 'deploy_docker/deploy-image.yml', sudoUser: null
+
+            }
+        }
+
+    }
+}
