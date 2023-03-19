@@ -1,0 +1,7 @@
+---
+- name: Pull docker image of Scientific Calculator
+  tasks:
+    - name: Pull scientific calculator image
+      docker_image:
+        name: narasimhannandagudi/scientific_calculator
+        source: pull
