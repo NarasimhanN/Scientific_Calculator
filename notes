@@ -1,0 +1,10 @@
+During Ansible phase:
+---------------------
+After changing encoding of system to UTF-8 (if you get error in jenkins) - Later restart it
+
+Send SSH key from user 'jenkins' to 'ansible_user' in the client machine
+Ex : simha>>su jenkins
+     jenkins>>ssh-keygen
+     jenkins>>ssh-copy-id simha@127.0.0.1
+     jenkins>>ssh-copy-id <userofcontainer>@<ipaddrofContainer>
+     // for multiple devices
