@@ -7,3 +7,9 @@
       docker_image:
         name: narasimhannandagudi/scientific_calculator:latest
         source: pull
+    - name: Start Docker service
+      service:
+        name : docker
+        state: started
+    - name : Running Container
+      shell: docker run -it -d --name scientific_calculator narasimhannandagudi/scientific_calculator:latest
