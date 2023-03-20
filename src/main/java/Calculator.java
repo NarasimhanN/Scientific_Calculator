@@ -10,6 +10,9 @@ public class Calculator {
     }
     static int subtraction(int a,int b){
         logger.info("In Subtraction");
+        logger.info(a);
+        logger.info(b);
+
         return a-b;
     }
 
