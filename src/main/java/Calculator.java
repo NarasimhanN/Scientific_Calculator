@@ -1,11 +1,15 @@
 import java.util.Scanner;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Calculator {
-
+    private static final Logger logger = LogManager.getLogger(Calculator.class);
     static  int addition(int a,int b){
+        logger.info("In Addition");
         return a+b;
     }
     static int subtraction(int a,int b){
+        logger.info("In Subtraction");
         return a-b;
     }
 
