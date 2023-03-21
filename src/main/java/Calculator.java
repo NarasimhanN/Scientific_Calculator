@@ -58,6 +58,7 @@ public class Calculator {
     }
     public static void main(String[] args) {
         int  choice=1;
+        //Menu driven code that runs till choice is 5
         while(choice!=5){
             System.out.println("\n\n\t\t----------------WELCOME TO CALCULATOR ---------------------\n\n");
             System.out.println("\n Press 1 : Square root");

@@ -26,3 +26,7 @@
 2023-03-21 15:40:35.805 [main] INFO  Calculator - Exec : Factorial Function 
 2023-03-21 15:40:36.269 [main] INFO  Calculator - Exec : Factorial Function 
 2023-03-21 15:40:40.533 [main] INFO  Calculator - Exec : Power Function 
+2023-03-21 22:52:30.991 [main] INFO  Calculator - Exec : Factorial Function 
+2023-03-21 22:52:30.992 [main] INFO  Calculator - Exec : Square Root Function 
+2023-03-21 22:52:30.992 [main] INFO  Calculator - Exec : Natural Log Function 
+2023-03-21 22:52:30.993 [main] INFO  Calculator - Exec : Power Function 
