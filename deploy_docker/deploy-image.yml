@@ -13,3 +13,5 @@
         state: started
     - name : Running Container
       shell: docker run -it -d --name scientific_calculator narasimhannandagudi/scientific_calculator:latest
+    - name : Stopping Container so that container is created
+      shell: docker stop scientific_calculator
