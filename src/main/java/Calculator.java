@@ -94,11 +94,12 @@ public class Calculator {
                     break;
                 case 4:
                     System.out.println("\n\t******* Welcome to Power Section *************\n\n");
-                    System.out.print("\n Enter the a and b where a^b is tobe calculated : ");
                     int x,p;
 //                    a = sc.nextInt();
 //                    b = sc.nextInt();
+                    System.out.print("\n Enter the Base number :  ");
                     while((x=takeIntInput())== -1111111);
+                    System.out.print("\n Enter the power to be raised :  ");
                     while((p=takeIntInput())== -1111111);
 
                     System.out.println("\n  "+ x+ " to the power " + p+ " = " +findPower(x,p));
