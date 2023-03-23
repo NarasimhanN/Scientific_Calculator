@@ -17,4 +17,9 @@ DevOps tool chain:
 6. Pushing created Docker image to Docker hub .
 7. Deployment - Do configuration management and deployment using  Ansible. Using these do configuration management and pull your docker image and run it on the managed hosts.
 8. Monitoring - for monitoring using the ELK stack. Using a log file to do the monitoring.
-9.
+
+---------------------------
+To Run :
+1) Start Ngrok
+2) Update the ngrok url in GitWebhook section and Jenkins Configurations -Location section
+3) If changes in secret key of Git, update in Gitwebhook section and Jenkins Configuration - Git section
