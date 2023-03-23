@@ -49,6 +49,7 @@ pipeline {
         }
         stage("Ansible Pull image"){
             steps{
+            sh "echo Ansible"
            //     ansiblePlaybook colorized: true, disableHostKeyChecking: true, inventory: 'deploy_docker/inventory', playbook: 'deploy_docker/deploy-image.yml', sudoUser: null
 
             }
