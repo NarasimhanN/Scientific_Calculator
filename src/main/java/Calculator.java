@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 
 public class Calculator {
     private static final Logger logger = LogManager.getLogger(Calculator.class);
+    //To Find the Square root
     static double findSquareRoot(double a){
         logger.info("Exec : Square Root Function ");
         double sqrt = Math.sqrt(a);
