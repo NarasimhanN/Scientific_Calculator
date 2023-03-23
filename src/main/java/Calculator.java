@@ -13,7 +13,7 @@ public class Calculator {
 //        logger.info("Square Root Calculated : "+sqrt);
         return sqrt;
     }
-    //To find Factorial of a Number
+    //To find Factorial of a No
     static double findFactorial(double a){
         logger.info("Exec : Factorial Function ");
         double fact=1;
