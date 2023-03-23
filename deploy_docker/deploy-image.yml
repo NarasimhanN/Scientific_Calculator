@@ -5,13 +5,13 @@
   tasks:
     - name: Pull scientific calculator image
       docker_image:
-        name: narasimhannandagudi/scientific_calculator:latest
+        name: narasimhannandagudi/scientific_calculator:latestTEST
         source: pull
     - name: Start Docker service
       service:
         name : docker
         state: started
     - name : Running Container
-      shell: docker run -it -d --name scientific_calculator narasimhannandagudi/scientific_calculator:latest
+      shell: docker run -it -d --name scientific_calculator narasimhannandagudi/scientific_calculator:latestTEST
     - name : Stopping Container so that container is created
       shell: docker stop scientific_calculator
