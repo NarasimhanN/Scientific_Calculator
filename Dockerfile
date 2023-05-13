@@ -2,6 +2,8 @@ FROM ubuntu
 WORKDIR /
 RUN apt update
 
+# Install JDK 11
+
 # Set JAVA_HOME environment variable
 ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64
 
